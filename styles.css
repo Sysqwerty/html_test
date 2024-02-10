@@ -11,3 +11,25 @@ img {
   display: block;
   margin: 0 auto;
 }
+
+#contacts {
+  margin-top: 20px;
+}
+
+#logo {
+  margin: 0;
+  width: 50px;
+  border-radius: 20px 50px 50px 20px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 10px;
+}
+
+nav ul li {
+  display: inline;
+}
