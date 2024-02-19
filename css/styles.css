@@ -1,12 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 /* prettier-ignore */
 @import url('normalize.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+:root {
+  --brand-color: #f0decc;
+  --secondary-color: chocolate;
+  --shadow-color: rgba(37, 41, 4, 0.5);
+  --box-shadow: -5px 5px 5px var(--shadow-color);
+}
 
 body {
   /* font-style: italic; */
   margin: 0;
   padding: 0;
-  background-color: #f0decc;
+  background-color: var(--brand-color);
   box-sizing: border-box;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -18,13 +25,13 @@ h1 {
 h1,
 h2 {
   font-family: 'Indie Flower', cursive;
-  text-shadow: -2px 5px 5px #d6904a;
+  text-shadow: -2px 5px 5px var(--secondary-color);
 }
 
 img {
   display: block;
   margin: 0 auto;
-  box-shadow: -5px 5px 5px rgba(41, 32, 4, 0.5);
+  box-shadow: var(--box-shadow);
   border-radius: 10px;
 }
 
@@ -44,11 +51,11 @@ header {
   display: flex;
   align-items: center;
   z-index: 1;
-  background: #f0decc;
+  background: var(--brand-color);
   position: fixed;
   top: 0;
   width: 100%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
 }
 
 header p {
@@ -92,6 +99,6 @@ footer {
 
 .navigation a:focus,
 .navigation a:hover {
-  border: 2px solid chocolate;
+  border: 2px solid var(--secondary-color);
   border-radius: 10px;
 }
