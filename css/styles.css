@@ -1,5 +1,4 @@
 /* prettier-ignore */
-@import url('normalize.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 :root {
@@ -49,19 +48,39 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+  list-style-type: none;
 }
 
 img {
   display: block;
 }
 
-#logo {
-  margin: 10px;
-  width: 50px;
-  border-radius: 20px 50px 50px 20px;
-  margin-bottom: 10px;
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: currentColor;
+  outline: none;
+  cursor: pointer;
 }
 
+input:checked {
+  color: #404bbf;
+}
+
+label:has(input:checked) {
+  color: #404bbf;
+}
+
+option:checked {
+  background: rgb(185, 62, 169);
+  color: white;
+}
+/* #endregion Base */
+
+/* #region Common */
 .section {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -78,7 +97,6 @@ img {
 .list {
   display: flex;
   gap: 24px;
-  list-style-type: none;
 }
 
 .link {
@@ -122,7 +140,6 @@ img {
   margin-bottom: 8px;
   line-height: 1.2;
 }
-/* #endregion Base */
 
 .main-title {
   font-size: 2em;
@@ -134,15 +151,9 @@ img {
   content: ' 🍔 ';
   color: orange;
 }
+/* #endregion Common */
 
-.ingridients-list {
-  padding-left: 20px;
-}
-
-.contacts {
-  margin-top: 20px;
-}
-
+/* #region Header */
 header {
   height: 70px;
   display: flex;
@@ -159,22 +170,15 @@ header p {
   padding-left: 10px;
 }
 
-main {
-  padding: 10px;
-  margin-top: 70px;
-  position: relative;
-}
-
-footer {
-  padding: 10px;
-  margin-top: 20px;
+.logo {
+  margin: 10px;
+  width: 50px;
+  border-radius: 20px 50px 50px 20px;
+  margin-bottom: 10px;
 }
 
 .navigation ul,
 .footer ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
   display: grid;
   grid-template-columns: repeat(3, max-content);
 }
@@ -205,7 +209,13 @@ footer {
   flex-direction: column;
 }
 
-.nav-item:hover::after {
+.nav-item:hover a,
+.nav-item.active a {
+  color: #404bbf;
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
   position: absolute;
   bottom: 0;
   display: inline-block;
@@ -215,7 +225,73 @@ footer {
   height: 4px;
   background: #404bbf;
 }
+/* #endregion Header */
 
+/* #region Main */
+.container {
+  padding: 10px;
+  margin-top: 70px;
+  position: relative;
+}
+/* #endregion Main */
+
+/* #region Ingridients */
+.ingridients-list {
+  list-style-type: '🧀 ';
+}
+
+.ingridients-list,
+.tags-list {
+  padding-left: 20px;
+}
+/* #endregion Ingridients */
+
+/* #region Feedback */
+.feedback-form {
+  display: flex;
+  align-items: flex-start;
+  width: max-content;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid orange;
+  margin: 0 0 10px;
+}
+
+input {
+  border: 1px solid teal;
+  border-radius: 4px;
+}
+
+form:focus-within {
+  border-color: blue;
+}
+
+.form-input:focus-within,
+.textarea:focus-within {
+  border-color: orangered;
+}
+
+.textarea {
+  resize: none;
+  width: 100%;
+  border: 1px solid teal;
+  border-radius: 4px;
+  padding: 10px;
+}
+/* #endregion Feedback */
+
+/* #region Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+/* #endregion Footer */
+
+/* #region Sport */
 .spin-img {
   box-shadow: none;
   animation-name: spin;
@@ -227,6 +303,7 @@ footer {
 .spin-img:hover {
   animation-direction: reverse;
 }
+/* #endregion Sport */
 
 @keyframes spin {
   0% {

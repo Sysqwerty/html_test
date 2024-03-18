@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
+    integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/styles.css" />
   <title>Tags</title>
 </head>
@@ -12,14 +15,14 @@
 <body>
   <header>
     <a href="index.html">
-      <img id="logo" src="logo.jpg" alt="Logo" width="120" />
+      <img class="logo" src="logo.jpg" alt="Logo" width="120" />
     </a>
 
     <nav class="navigation">
       <ul>
         <li class="nav-item"><a href="index.html">Food</a></li>
         <li class="nav-item"><a href="sport.html">Sport</a></li>
-        <li class="nav-item"><a href="#">Tags</a></li>
+        <li class="nav-item active"><a href="#">Tags</a></li>
       </ul>
     </nav>
   </header>
@@ -27,7 +30,7 @@
   <main class="container">
     <section class="section">
       <p>Navigation by tags</p>
-      <ul>
+      <ul class="tags-list">
         <li><a href="#about">About</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#team">Team</a></li>

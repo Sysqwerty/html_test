@@ -5,25 +5,31 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
+    integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/styles.css" />
   <title>Food</title>
 </head>
 
 <body>
+  <!-- #region Header -->
   <header>
     <a href="#">
-      <img id="logo" src="logo.jpg" alt="Logo" width="120" />
+      <img class="logo" src="logo.jpg" alt="Logo" width="120" />
     </a>
     <nav class="navigation">
       <ul>
-        <li class="nav-item"><a href="#">Food</a></li>
+        <li class="nav-item active"><a href="#">Food</a></li>
         <li class="nav-item"><a href="sport.html">Sport</a></li>
         <li class="nav-item"><a href="tags.html">Tags</a></li>
       </ul>
     </nav>
   </header>
+  <!-- #endregion Header -->
 
   <main class="container">
+    <!-- #region About -->
     <section id="about" class="section">
       <h1 class="main-title title-icon">Sweet cheese pancakes</h1>
       <img src="https://ac.goit.global/fullstack/html-css-v2/module-1/autocheck/pancakes.jpg"
@@ -35,7 +41,9 @@
         with sour cream and fruit in pretty much any form.
       </p>
     </section>
+    <!-- #endregion About -->
 
+    <!-- #region Ingridients -->
     <section id="ingredients" class="section">
       <h2 class="sub-title">Ingredients</h2>
       <p>
@@ -54,7 +62,9 @@
         <li>fresh fruit, jam, or sour cream for topping</li>
       </ul>
     </section>
+    <!-- #endregion Ingridients -->
 
+    <!-- #region Directions -->
     <section id="directions" class="section">
       <h2 class="sub-title">Directions</h2>
       <p>
@@ -84,22 +94,87 @@
         </li>
       </ol>
     </section>
+    <!-- #endregion Directions -->
 
-    <a href="https://instagram.com/goitclub" target="_blank">Author's profile</a>
-    <div class="contacts">
-      <p>Contacts</p>
-      <address>
-        <a href="mailto:mango@mail.pig">mango@mail.pig</a><br />
-        <a href="tel:+11112223344">+1(111) 222-33-44</a><br />
-        м. Київ,<br />
-        Бульвар Лесі Українки, буд. 26,<br />
-        4й поверх офіс 427
-      </address>
-    </div>
+    <!-- #region Feedback -->
+    <section class="section" id="feedback">
+      <h2 class="visually-hidden">Feedback</h2>
+      <form class="feedback-form">
+        <fieldset>
+          <legend>
+            User data
+          </legend>
+          <label>
+            Username
+            <input class="form-input" type="text" name="username" placeholder="Your name" />
+          </label>
+          <label>
+            Useremail
+            <input class="form-input" type="email" name="useremail" placeholder="Your email" required />
+          </label>
+        </fieldset>
+        <label>
+          Feedback
+          <textarea class="textarea" name="feedback" rows="5" placeholder="Enter your message here..."></textarea>
+        </label>
+        <label for="size">Size</label>
+        <select id="size" name="size">
+          <option value="xs">Extra Small</option>
+          <option value="s">Small</option>
+          <option value="m" selected>Medium</option>
+          <option value="l">Large</option>
+        </select>
+        <label for="month">Month</label>
+        <select name="month" id="month">
+          <optgroup label="Summer">
+            <option value="s6">June</option>
+            <option value="s7">July</option>
+            <option value="s8">August</option>
+          </optgroup>
+          <optgroup label="Autumn">
+            <option value="s9">September</option>
+            <option value="s10">October</option>
+            <option value="s11">November</option>
+          </optgroup>
+        </select>
+        <input type="number" name="age" value="0" />
+        <fieldset>
+          <p>Choose a color:</p>
+          <label>
+            <input type="radio" name="color" value="red" checked />
+            Red
+          </label>
+          <label>
+            <input type="radio" name="color" value="white" />
+            White
+          </label>
+          <label>
+            <input type="radio" name="color" value="green" />
+            Green
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>What are your hobbies?</legend>
+          <label>
+            <input type="checkbox" name="hobby" value="music" checked />
+            Music
+          </label>
+          <label>
+            <input type="checkbox" name="hobby" value="sports" />
+            Sports
+          </label>
+          <label>
+            <input type="checkbox" name="hobby" value="reading" />
+            Reading
+          </label>
+        </fieldset>
+        <button type="submit">Submit feedback</button>
+      </form>
+    </section>
+    <!-- #endregion Feedback -->
   </main>
 
   <footer class="footer">
-    <span>&copy; 2024. All rights reserved</span>
     <ul>
       <li>
         <a href="https://www.instagram.com/" target="_blank">
@@ -120,6 +195,19 @@
         </a>
       </li>
     </ul>
+    <span>&copy; 2024. All rights reserved</span>
+    <a href="https://instagram.com/goitclub" target="_blank">Author's profile</a>
+    <div class="contacts">
+      <address>
+        <a href="mailto:mango@mail.pig">mango@mail.pig</a>
+        <a href="tel:+11112223344">+1(111) 222-33-44</a>
+        <pre>
+        м. Київ,
+        Бульвар Лесі Українки, буд. 26,
+        4й поверх офіс 427</pre>
+      </address>
+    </div>
+
   </footer>
 </body>
 
